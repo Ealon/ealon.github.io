@@ -691,12 +691,12 @@ Footer
   text-indent: -999em; }
   .icon.icon-github {
     background-image: url("../images/github.svg"); }
-  .icon.icon-weibo {
-    background-image: url("../images/weibo.svg"); }
-  .icon.icon-mail {
-    background-image: url("../images/mail.svg"); }
-  .icon.icon-twitter {
-    background-image: url("../images/twitter.svg"); }
+  .icon.icon-wechat {
+    background-image: url("../images/wechat.svg"); }
+  .icon.icon-gmail {
+    background-image: url("../images/gmail.svg"); }
+  .icon.icon-facebook {
+    background-image: url("../images/facebook.svg"); }
   .icon:hover {
     opacity: 0.7; }
 
