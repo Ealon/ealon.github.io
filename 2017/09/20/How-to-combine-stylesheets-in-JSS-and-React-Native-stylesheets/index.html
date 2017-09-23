@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<!-- Head tag -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!--Description-->
+  
+  <meta name="description" content="Memos and notes of Ealon Huang">
+  
+
+  <!--Author-->
+  
+  <meta name="author" content="Ealon Huang">
+  
+
+  <!--Open Graph Title-->
+  
+      <meta property="og:title" content="How to combine stylesheets in JSS and React Native stylesheets"/>
+  
+  <!--Open Graph Description-->
+  
+      <meta property="og:description" content="Memos and notes of Ealon Huang" />
+  
+  <!--Open Graph Site Name-->
+  <meta property="og:site_name" content="Ealon&#39;s Blog"/>
+  <!--Type page-->
+  
+      <meta property="og:type" content="article" />
+  
+  <!--Page Cover-->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Title -->
+  
+  <title>How to combine stylesheets in JSS and React Native stylesheets - Ealon&#39;s Blog</title>
+
+
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/Ealon/ealon.github.io/master/images/ealon/ealon.png">
+
+  <!-- Custom CSS/Sass -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!----------------------------
+  https://github.com/GallenHu/hexo-theme-Daily
+
+ _____            _   _
+|  __ \          (_) | |
+| |  | |   __ _   _  | |  _   _
+| |  | |  / _` | | | | | | | | |
+| |__| | | (_| | | | | | | |_| |
+|_____/   \__,_| |_| |_|  \__, |
+                          __/ |
+                         |___/
+
+    --------------------------->
+
+</head>
+
+
+<body>
+
+  <!-- Nav -->
+  <header class="site-header">
+  <div class="header-inside">
+    <div class="logo">
+      <a href="/" rel="home">
+        
+        <img src="https://raw.githubusercontent.com/Ealon/ealon.github.io/master/images/ealon/ealon.png" alt="Ealon's Blog" height="60">
+        
+      </a>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse">
+        <ul class="navbar-nav">
+          
+          
+            <li>
+              <a href="/.">
+                
+                  HOME
+                
+              </a>
+            </li>
+          
+            <li>
+              <a href="/archives">
+                
+                  ARCHIVE
+                
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+    <div class="button-wrap">
+      <button class="menu-toggle">Primary Menu</button>
+    </div>
+  </div>
+</header>
+
+
+  <!-- Main Content -->
+  <div class="content-area">
+  <div class="post">
+    <!-- Post Content -->
+    <div class="container">
+      <article>
+        <!-- Title date & tags -->
+        <div class="post-header">
+          <h1 class="entry-title">
+            How to combine stylesheets in JSS and React Native stylesheets
+            
+          </h1>
+          <p class="posted-on">
+          2017-09-20
+          </p>
+          <div class="tags-links">
+            
+              
+                <a href="/tags/css/" rel="tag">
+                  css
+                </a>
+              
+                <a href="/tags/javascript/" rel="tag">
+                  javascript
+                </a>
+              
+                <a href="/tags/jss/" rel="tag">
+                  jss
+                </a>
+              
+                <a href="/tags/react-native/" rel="tag">
+                  react-native
+                </a>
+              
+                <a href="/tags/react/" rel="tag">
+                  react
+                </a>
+              
+            
+          </div>
+        </div>
+        <!-- Post Main Content -->
+        <div class="entry-content">
+          <blockquote>
+<p>JSS is a more powerful abstraction over CSS. It uses JavaScript as a language to describe styles in a declarative and maintainable way. It is a high performance JS to CSS compiler which works at runtime and server-side.</p>
+</blockquote>
+<p><a href="https://github.com/cssinjs/jss" target="_blank" rel="external">See on Github</a></p>
+<hr>
+<p>If you are using jss in <strong><em>React</em></strong>, the trick is to use <code>classnames</code>. </p>
+<p>Step1:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; withStyles, createStyleSheet &#125; <span class="keyword">from</span> <span class="string">'material-ui/styles'</span>;</div><div class="line"><span class="keyword">import</span> classNames <span class="keyword">from</span> <span class="string">'classnames'</span>;</div></pre></td></tr></table></figure></p>
+<p>Step2: compose your stylesheets<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> styles = &#123;</div><div class="line">  ...</div><div class="line"></div><div class="line">  textWidth:&#123;</div><div class="line">    width: <span class="string">'40%'</span>,</div><div class="line">    minWidth: <span class="string">'200px'</span>,</div><div class="line">  &#125;,</div><div class="line">  ...</div><div class="line">  table: &#123;</div><div class="line">    margin: <span class="string">'0 auto'</span>,</div><div class="line">    textAlign: <span class="string">'left'</span>,</div><div class="line">  &#125;</div><div class="line">  ...</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>step3:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;table className=&#123;classNames(<span class="keyword">this</span>.props.classes.table, <span class="keyword">this</span>.props.classes.textWidth)&#125;&gt;</div></pre></td></tr></table></figure></p>
+<p>Step4:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> withStyles(createStyleSheet(styles))(ComponentName);</div></pre></td></tr></table></figure></p>
+<hr>
+<p>If you are using <strong><em>StyleSheet</em></strong> in <strong><em>React Native</em></strong>, see docs <a href="https://facebook.github.io/react-native/docs/stylesheet.html" target="_blank" rel="external">here</a></p>
+<p>Step1: Create a new StyleSheet:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> styles = StyleSheet.create(&#123;</div><div class="line">  container: &#123;</div><div class="line">    borderRadius: <span class="number">4</span>,</div><div class="line">    borderWidth: <span class="number">0.5</span>,</div><div class="line">    borderColor: <span class="string">'#d6d7da'</span>,</div><div class="line">  &#125;,</div><div class="line">  title: &#123;</div><div class="line">    fontSize: <span class="number">19</span>,</div><div class="line">    fontWeight: <span class="string">'bold'</span>,</div><div class="line">  &#125;,</div><div class="line">  activeTitle: &#123;</div><div class="line">    color: <span class="string">'red'</span>,</div><div class="line">  &#125;,</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>Step2: Use a StyleSheet:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;View style=&#123;styles.container&#125;&gt;</div><div class="line">  &lt;Text style=&#123;[styles.title, this.props.isActive &amp;&amp; styles.activeTitle]&#125; /&gt;</div><div class="line">&lt;/View&gt;</div></pre></td></tr></table></figure></p>
+
+        </div>
+      </article>
+    </div>
+    <!-- Comments -->
+    <div class="container">
+      
+<section id="comment">
+  <!-- <h1 class="title">Comments</h1> -->
+
+  
+</section>
+
+
+    </div>
+    <!-- Pre or Next -->
+    <div class="nav-links">
+      
+      
+        <div class="nav-next">
+          <a href="/2017/09/19/Are-We-On-A-Date/" rel="prev">Next Post <span class="meta-arraw meta-arraw-right"></span></a>
+        </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Footer -->
+  <!-- Footer-widgets -->
+<div class="footer-widgets">
+  <div class="row inside-wrapper">
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">ABOUT</h1>
+        <div class="custom-widget-content">
+          
+          Memos and notes of Ealon Huang
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Contact</h1>
+        <div class="widget-text">
+          
+            
+              <a href="https://github.com/Ealon" class="icon icon-github" target="_blank">github</a>
+            
+              <a href="" class="icon icon-wechat" target="_blank">wechat</a>
+            
+              <a href="mailto:ealonhuang@gmail.com" class="icon icon-gmail" target="_blank">gmail</a>
+            
+              <a href="" class="icon icon-facebook" target="_blank">facebook</a>
+            
+          
+        </div>
+      </aside>
+    </div>
+    <div class="col-1-3">
+      <aside>
+        <h1 class="widget-title">Search</h1>
+        <div class="widget-text">
+          <form onSubmit="return appDaily.submitSearch('')">
+            <p>
+              <input type="text" placeholder="search..." id="homeSearchInput">
+            </p>
+            <!-- <input type="submit" value="GO"> -->
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="site-info">
+  <p>
+    <span>Ealon's Blog &copy; 2017</span>
+    
+      <span class="split">|</span>
+      <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a></span>
+    
+  </p>
+</footer>
+
+
+  <!-- After footer scripts -->
+  <!-- scripts -->
+<script src="/js/app.js"></script>
+
+
+
+
+
+</body>
+
+</html>
