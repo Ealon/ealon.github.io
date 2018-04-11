@@ -525,7 +525,7 @@ Content
   position: relative; }
 
 .container {
-  max-width: 600px;
+  max-width: 80%;
   margin: 0 auto;
   padding-left: 50px;
   padding-right: 50px; }
