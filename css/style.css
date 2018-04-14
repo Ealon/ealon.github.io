@@ -828,9 +828,9 @@ Footer
   .entry-content blockquote {
     color: #333;
     margin: 1em 0;
-    padding: 0 0 0 30px;
-    border-left: 4px solid #F06292;
-    background-color: #fbfbfb; }
+    padding: 5px 20px;
+    border-left: 4px solid #1976D2;
+    background-color: #BBDEFB; }
   .entry-content p img {
     display: block;
     margin: 0 auto; }
@@ -856,8 +856,9 @@ pre {
 
 code {
   padding: 0.2em 0.4em;
-  background-color: #efefef;
-  border-radius: 3px; }
+  background-color: #FBE9E7;
+  border: 0;
+  color: #E91E63; }
 
 pre .line {
   min-height: 1em;
