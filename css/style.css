@@ -525,7 +525,8 @@ Content
   position: relative; }
 
 .container {
-  max-width: 80%;
+  width: 70%;
+  maxWidth: 1000px;
   margin: 0 auto;
   padding-left: 50px;
   padding-right: 50px; }
@@ -771,6 +772,7 @@ Footer
     float: left;
     margin-left: 20px; }
     .navbar ul li a {
+      font-family: -apple-system, BlinkMacSystemFont,"Helvetica Neue","PingFang-SC-Regular","STHeiti", "Helvetica","Arial","Verdana","sans-serif","Microsoft YaHei";
       text-decoration: none;
       line-height: 1.5; }
       .navbar ul li a:hover {

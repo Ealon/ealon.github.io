@@ -90,6 +90,14 @@
             </li>
           
             <li>
+              <a href="/myapp">
+                
+                  MY APP
+                
+              </a>
+            </li>
+          
+            <li>
               <a href="/archives">
                 
                   ARCHIVE
@@ -126,12 +134,12 @@
           <div class="tags-links">
             
               
-                <a href="/tags/javascript/" rel="tag">
-                  javascript
-                </a>
-              
                 <a href="/tags/react/" rel="tag">
                   react
+                </a>
+              
+                <a href="/tags/javascript/" rel="tag">
+                  javascript
                 </a>
               
             
@@ -139,12 +147,12 @@
         </div>
         <!-- Post Main Content -->
         <div class="entry-content">
-          <p>什么是Immediately-Invoked Function Expression呢？它使一个被立即调用的函数表达式.就像引导你去调用的函数表达式. So, how to use IIFE in React JS, especially in Render()?<br><a id="more"></a><br>Let’s take a look at an example<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="string">'IIFE!'</span>);</div><div class="line">&#125;)()</div></pre></td></tr></table></figure></p>
-<p>Paste the code into your Chrome Console and execute, it works. It’s an IIFE example. And, it equals to<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  alert(<span class="string">'IIFE!'</span>);</div><div class="line">&#125;())</div></pre></td></tr></table></figure></p>
-<p>or in ES6<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  alert(<span class="string">'IIFE!'</span>);</div><div class="line">&#125;)()</div></pre></td></tr></table></figure></p>
-<p>In React, you need to wrap it in “{ }”, of course<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert(<span class="string">'IIFE!'</span>);</div><div class="line">  &#125;)()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>But if you need to use variables in <strong>this</strong> , you need to bind like this<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.state.editing) &#123;</div><div class="line">      Alert.alert(<span class="string">'editing'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;).bind(<span class="keyword">this</span>)()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Or simply use ES6 syntax like below<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  (<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.state.editing) &#123;</div><div class="line">      Alert.alert(<span class="string">'editing'</span>);</div><div class="line">    &#125;</div><div class="line">  &#125;)()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+          <p>什么是Immediately-Invoked Function Expression呢？它使一个被立即调用的函数表达式.就像引导你去调用的函数表达式. So, how to use IIFE in React JS, especially in Render()?<br><a id="more"></a><br>Let’s take a look at an example<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">'IIFE!'</span>);</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure></p>
+<p>Paste the code into your Chrome Console and execute, it works. It’s an IIFE example. And, it equals to<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">'IIFE!'</span>);</span><br><span class="line">&#125;())</span><br></pre></td></tr></table></figure></p>
+<p>or in ES6<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  alert(<span class="string">'IIFE!'</span>);</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure></p>
+<p>In React, you need to wrap it in “{ }”, of course<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'IIFE!'</span>);</span><br><span class="line">  &#125;)()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>But if you need to use variables in <strong>this</strong> , you need to bind like this<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.state.editing) &#123;</span><br><span class="line">      Alert.alert(<span class="string">'editing'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;).bind(<span class="keyword">this</span>)()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Or simply use ES6 syntax like below<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  (<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.state.editing) &#123;</span><br><span class="line">      Alert.alert(<span class="string">'editing'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Cheers ~ 👹</p>
 
         </div>
@@ -228,7 +236,7 @@
 <!-- Footer -->
 <footer class="site-info">
   <p>
-    <span>Ealon's Blog &copy; 2017</span>
+    <span>Ealon's Blog &copy; 2018</span>
     
       <span class="split">|</span>
       <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a></span>

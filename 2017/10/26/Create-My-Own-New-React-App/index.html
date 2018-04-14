@@ -90,6 +90,14 @@
             </li>
           
             <li>
+              <a href="/myapp">
+                
+                  MY APP
+                
+              </a>
+            </li>
+          
+            <li>
               <a href="/archives">
                 
                   ARCHIVE
@@ -126,12 +134,12 @@
           <div class="tags-links">
             
               
-                <a href="/tags/javascript/" rel="tag">
-                  javascript
-                </a>
-              
                 <a href="/tags/react/" rel="tag">
                   react
+                </a>
+              
+                <a href="/tags/javascript/" rel="tag">
+                  javascript
                 </a>
               
                 <a href="/tags/eslint/" rel="tag">
@@ -148,14 +156,14 @@
         <!-- Post Main Content -->
         <div class="entry-content">
           <h2 id="Create-My-Own-New-React-App"><a href="#Create-My-Own-New-React-App" class="headerlink" title="Create My Own New React App"></a>Create My Own New React App</h2><hr>
-<h3 id="1-Create-the-baisc-project-skeleton"><a href="#1-Create-the-baisc-project-skeleton" class="headerlink" title="1. Create the baisc project skeleton"></a>1. Create the baisc project skeleton</h3><p>Read the docs at <a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="external">https://github.com/facebookincubator/create-react-app</a></p>
-<p>run<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install -g create-react-app</div><div class="line">create-react-app project-name</div><div class="line">cd project-name/</div><div class="line">npm start</div></pre></td></tr></table></figure></p>
-<p>Then the application is running at <a href="http://localhost:3000/" target="_blank" rel="external">http://localhost:3000/</a></p>
-<h3 id="2-Add-eslint"><a href="#2-Add-eslint" class="headerlink" title="2. Add eslint"></a>2. Add eslint</h3><p>Read <a href="https://www.npmjs.com/package/eslint-config-airbnb" target="_blank" rel="external">https://www.npmjs.com/package/eslint-config-airbnb</a><br>run<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm info &quot;eslint-config-airbnb@latest&quot; peerDependencies</div></pre></td></tr></table></figure></p>
+<h3 id="1-Create-the-baisc-project-skeleton"><a href="#1-Create-the-baisc-project-skeleton" class="headerlink" title="1. Create the baisc project skeleton"></a>1. Create the baisc project skeleton</h3><p>Read the docs at <a href="https://github.com/facebookincubator/create-react-app" target="_blank" rel="noopener">https://github.com/facebookincubator/create-react-app</a></p>
+<p>run<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install -g create-react-app</span><br><span class="line">create-react-app project-name</span><br><span class="line">cd project-name/</span><br><span class="line">npm start</span><br></pre></td></tr></table></figure></p>
+<p>Then the application is running at <a href="http://localhost:3000/" target="_blank" rel="noopener">http://localhost:3000/</a></p>
+<h3 id="2-Add-eslint"><a href="#2-Add-eslint" class="headerlink" title="2. Add eslint"></a>2. Add eslint</h3><p>Read <a href="https://www.npmjs.com/package/eslint-config-airbnb" target="_blank" rel="noopener">https://www.npmjs.com/package/eslint-config-airbnb</a><br>run<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm info &quot;eslint-config-airbnb@latest&quot; peerDependencies</span><br></pre></td></tr></table></figure></p>
 <p>to check the peer dependencies that are needed</p>
-<p>run<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save-dev eslint-config-airbnb</div></pre></td></tr></table></figure></p>
+<p>run<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev eslint-config-airbnb</span><br></pre></td></tr></table></figure></p>
 <p>to install eslint configuration of airbnb coding style, then <code>--save-dev</code> the other peer dependencies as well, they should be <strong><em>eslint, eslint-plugin-import, eslint-plugin-jsx-a11y, eslint-plugin-react</em></strong></p>
-<p>At last, add<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="string">"extends"</span>: <span class="string">"airbnb"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>At last, add<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"extends"</span>: <span class="string">"airbnb"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>to the <code>.eslintrc</code> file</p>
 
         </div>
@@ -239,7 +247,7 @@
 <!-- Footer -->
 <footer class="site-info">
   <p>
-    <span>Ealon's Blog &copy; 2017</span>
+    <span>Ealon's Blog &copy; 2018</span>
     
       <span class="split">|</span>
       <span>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> with Theme <a href="https://github.com/GallenHu/hexo-theme-Daily" target="_blank">Daily</a></span>
