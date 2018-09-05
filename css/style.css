@@ -860,6 +860,9 @@ code {
   border: 0;
   color: #E91E63; }
 
+code.html {
+  background-color: transparent; }
+
 pre .line {
   min-height: 1em;
   color: #fff; }
@@ -952,6 +955,9 @@ pre .line {
 
 .highlight.cpp .code:after {
   content: 'C++'; }
+
+.highlight.php .string {
+  color: #80CBC4; }
 
 pre {
   color: #525252; }
